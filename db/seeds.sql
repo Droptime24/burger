@@ -1,3 +1,7 @@
-INSERT INTO burgers (burger_names, devoured) VALUES ('Handlebars With Cheese', false);
-INSERT INTO burgers (burger_names, devoured) VALUES ('MySQL Extra Bacon', false);
-INSERT INTO burgers (burger_names, devoured) VALUES ('Node-Beef Burger', false)
+
+INSERT INTO burgers (name) VALUES ('Buffalo Wild Burger');
+INSERT INTO burgers (name) VALUES ('Mac Daddy and Cheese');
+INSERT INTO burgers (name, devoured) VALUES ('Crazy Bacon Burger', true);
+INSERT INTO burgers (name, devoured) VALUES ('The Carlton', true);
+INSERT INTO burgers (name, devoured) VALUES ('Tiny Tot', true);
+INSERT INTO burgers (name) VALUES ('Mamas Way');
