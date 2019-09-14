@@ -1,34 +1,63 @@
-<h1 class="text-center">Eat Da Burger</h1>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
 
-<h2 class="text-left">Orders</h2>
 
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{ > burgers/burger-block devoured=true }}
-        {{/unless}}
-    {{/each}}
-</ul>
+    <div class="jumbotron jumbotron-fluid bg-warning">
+        <div class="container">
+            <h1 class="display-3 text-center">Eat Da Burger</h1>
+            <br>
+                <hr class="my-2">
+                    <h1 class="text-center">Order Here</h1>
+                    <br>
 
-<div class="container text-right">
-    <div class="col-xs-1-12">
-        <h2 class="text-right">Devoured Burgers</h2>
-        <ul>
-            {{#each burgers}}
-                {{#if devoured}}
-                    {{ > burgers/burger-block devoured=false }}
-                {{/if}}
-            {{/each}}
-        </ul>
-    </div>
-    </div>
+                        <form action="/public/assets/js/burgers.js" class="create-form" method="POST">
+                            <center>
+                                <button style="background-color:black; color:white; width: 250px" type="submit">Place order</button>
+                            </center>
+                            <br>
+                                <div class="form-group">
+                                    <label for="ca">Burger Name:</label>
+                                    <input style="width: 630px;" id="ca" name="name" type="text"></div>
+                                </form>                          
+                                <div class="container-fluid text-center">
+                                    <h2>Orders</h2>
+                                    <ul>
+                                        {{#each burgers}}
+                                            {{#unless devoured}}
+                                                {{>burgers/burger-block devoured=true}}
+                                            {{/unless}}
+                                        {{/each}}
+                                    </ul>
+                                   
 
-    <h2>Add a Burger</h2>
-    <form action="/public/assets/js/burgers.js" class="create-form" method="POST">
-
-        <div class="form-group">
-            <label for="ca">Burger Name:</label>
-            <input id="ca" name="name" type="text"></div>
-
-            <button type="submit">Add Burger</button>
-        </form>
+                              
+                                    <h2 class="text-center">Devoured</h2>
+                                    <ul>
+                                        {{#each burgers}}
+                                            {{#if devoured}}
+                                                {{>burgers/burger-block devoured=false}}
+                                            {{/if}}
+                                        {{/each}}
+                                    </ul>
+                                     </div>
+                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="jumbotron jumbotron-fluid bg-dark">
+                            <div class="container bg-dark">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                        
+                            </div>
+                        </div>
